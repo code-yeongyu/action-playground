@@ -1,0 +1,12 @@
+name: 'Print Hello'
+description: 'Print Hello with number'
+inputs:
+  number:
+    description: 'Input number'
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - run: echo Hello world with ${{ inputs.number }}
+      shell: bash
